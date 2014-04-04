@@ -29,7 +29,7 @@ angular.module('owmServices', [])
         transformResponse: function(data){
           return doTransformResponse(data);
         },
-        cache: false
+        cache: true
       },
     });
   })
@@ -46,7 +46,7 @@ angular.module('owmServices', [])
         transformResponse: function(data){
           return doTransformResponse(data);
         },
-        cache: false
+        cache: true
       },
     });
   });
