@@ -1,5 +1,6 @@
 #!/bin/bash
 
+grunt build
 cd ../webapp_hosted
 git checkout gh-pages
 rm -rf *
