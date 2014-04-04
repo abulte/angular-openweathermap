@@ -1,0 +1,31 @@
+{
+  "name": "ngLadda",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kiralydavid/ng-ladda",
+  "authors": [
+    "Dávid Király <info@kiralydavid.com>"
+  ],
+  "description": "Ladda directive for AngularJS",
+  "main": "ng-ladda.js",
+  "keywords": [
+    "ladda",
+    "angular",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [],
+  "dependencies": {
+    "angular": "~1.2.13",
+    "ladda": "~0.9.2"
+  },
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0",
+    "commit": "c151ee05dac23ddae49b402e4645464533895947"
+  },
+  "_source": "git://github.com/kiralydavid/ng-ladda.git",
+  "_target": "~0.1.0",
+  "_originalSource": "ngLadda",
+  "_direct": true
+}
