@@ -7,7 +7,7 @@
       <div class="panel-heading">{{ forecast.dt + 1000 | date:'medium' }}</div>
       <div class="panel-body">
         <div>
-          {{ forecast.main.temp_min }} < <strong>{{ forecast.main.temp }} °C</strong> < {{ forecast.main.temp_max }}
+          {{ forecast.main.temp_min }} &lt; <strong>{{ forecast.main.temp }} °C</strong> &lt; {{ forecast.main.temp_max }}
         </div>
         <div>
           <img ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">
