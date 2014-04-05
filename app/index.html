@@ -51,6 +51,8 @@
 
       <div ng-if="!!errorMsg" class="alert alert-danger" ng-cloak>{{ errorMsg }}</div>
 
+      <div ng-if="!!heureLoading||!!jourLoading" class="alert alert-info visible-xs" ng-cloak>Chargement...</div>
+
       <!-- Add your site or application content here -->
       <span ng-view=""></span>
 
