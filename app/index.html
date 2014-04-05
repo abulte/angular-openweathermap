@@ -26,13 +26,28 @@
 
     <div class="container">
 
-      <div class="header" ng-controller="MenuCtrl">
-        <ul class="nav nav-pills pull-right">
-          <li ng-class="{active: activeTab == 'jour'}"><a ng-ladda="jourLoading" class="ladda-button" data-style="zoom-in" ng-href="/">Jour par jour</a></li>
-          <li ng-class="{active: activeTab == 'heure'}"><a ng-ladda="heureLoading" class="ladda-button" data-style="zoom-in" ng-href="/#/details">Heure par heure</a></li>
-        </ul>
-        <h3 class="text-muted">meteo.bulte.net</h3>
-      </div>
+      <nav class="navbar navbar-default" role="navigation" ng-controller="MenuCtrl">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/#/">meteo.bulte.net</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li ng-class="{active: activeTab == 'jour'}"><a ng-ladda="jourLoading" class="ladda-button" data-style="zoom-in" ng-href="/" data-spinner-color="black">Jour par jour</a></li>
+              <li ng-class="{active: activeTab == 'heure'}"><a ng-ladda="heureLoading" class="ladda-button" data-style="zoom-in" ng-href="/#/details" data-spinner-color="black">Heure par heure</a></li>
+            </ul>
+          </div>
+
+        </div><!-- /.container-fluid -->
+      </nav>
 
       <div ng-if="!!errorMsg" class="alert alert-danger" ng-cloak>{{ errorMsg }}</div>
 
