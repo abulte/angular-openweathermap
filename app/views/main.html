@@ -8,9 +8,9 @@
       <div class="panel-body">
         <div>
           {{ forecast.temp.min }} &lt; <strong>{{ forecast.temp.day }} °C</strong> &lt; {{ forecast.temp.max }}
+          <img ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">
         </div>
         <div>
-          <img ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png">
         </div>
       </div>
     </div>
