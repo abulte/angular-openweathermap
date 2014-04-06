@@ -9,7 +9,7 @@ var showNotifCallback = function(temp, NotifObj) {
 
 angular.module('meteoApp')
 
-.controller('MainCtrl', function($scope, $rootScope, DailyForecast, $window) {
+.controller('MainCtrl', function($scope, $rootScope, DailyForecast, $window, $cacheFactory) {
   $rootScope.jourLoading = 1;
 
   // get data
@@ -39,6 +39,9 @@ angular.module('meteoApp')
       }
       // loading = 0
       $rootScope.jourLoading = 0;
+      // town info via cache
+      var cache = $cacheFactory.get('meteoCache');
+      $scope.weatherTown = cache.get('weatherTown');
     }, function(error) {
       $scope.errorMsg = error;
       $rootScope.jourLoading = 0;
@@ -53,10 +56,13 @@ angular.module('meteoApp')
 
 })
 
-.controller('DetailsCtrl', function($scope, $rootScope, Forecast) {
+.controller('DetailsCtrl', function($scope, $rootScope, Forecast, $cacheFactory) {
   $rootScope.heureLoading = 1;
   $scope.forecast = Forecast.query({}, function() {
     $rootScope.heureLoading = 0;
+    // town info via cache
+    var cache = $cacheFactory.get('meteoCache');
+    $scope.weatherTown = cache.get('weatherTown');
   }, function(error) {
     $scope.errorMsg = error;
     $rootScope.heureLoading = 0;
